@@ -1,0 +1,109 @@
+/* All media queries live here, grouped by screen size (laptop → tablet → phone) */
+
+/* Laptop and small desktop */
+@media (max-width: 1024px) {
+  .feature {
+    grid-template-columns: 72px 1fr;
+  }
+
+  .feature__text {
+    grid-column: 2;
+  }
+}
+
+/* Tablet: navigation turns into a menu and layouts stack */
+@media (max-width: 860px) {
+  :root {
+    --space-7: 4rem;
+    --space-6: 3rem;
+  }
+
+  /* Navbar */
+  .navbar__toggle {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+  }
+
+  .navbar__menu {
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--gutter);
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .navbar__menu--open {
+    display: flex;
+  }
+
+  .navbar__links {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  /* Hero */
+  .hero__text,
+  .hero__actions {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+
+  /* Dashboard: hide the sidebar and stack the lower panels */
+  .dash {
+    grid-template-columns: 1fr;
+  }
+
+  .dash__sidebar {
+    display: none;
+  }
+
+  .dash__lower {
+    grid-template-columns: 1fr;
+  }
+
+  /* Other sections */
+  .about__grid,
+  .pricing__grid,
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Phone */
+@media (max-width: 480px) {
+  :root {
+    --gutter: 1rem;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dash {
+    box-shadow: 6px 6px 0 var(--citron), 6px 6px 0 2px var(--ink);
+  }
+
+  .dash__stats {
+    gap: var(--space-2);
+  }
+
+  .feature {
+    grid-template-columns: 1fr;
+    padding: var(--space-4) 0;
+  }
+
+  .feature__text {
+    grid-column: auto;
+  }
+
+  .plan {
+    padding: var(--space-4);
+  }
+}

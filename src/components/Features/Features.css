@@ -1,0 +1,56 @@
+.features {
+  padding: var(--space-7) 0;
+  border-top: 1px solid var(--line);
+}
+
+.features__heading {
+  max-width: 16ch;
+  margin-bottom: var(--space-6);
+}
+
+/* Each feature is a ruled row: icon, title, text */
+.features__list {
+  border-bottom: 2px solid var(--ink);
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: 72px 1fr 1.3fr;
+  gap: var(--space-4);
+  align-items: start;
+  padding: var(--space-5) var(--space-3);
+  border-top: 2px solid var(--ink);
+  transition: background-color 0.2s;
+}
+
+.feature:hover {
+  background: var(--surface);
+}
+
+.feature__icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  background: var(--citron);
+  border: 2px solid var(--ink);
+}
+
+.feature__icon svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.feature__title {
+  font-size: var(--fs-xl);
+}
+
+.feature__text {
+  max-width: 50ch;
+  color: var(--ink-soft);
+}

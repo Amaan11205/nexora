@@ -1,0 +1,75 @@
+.pricing {
+  padding: var(--space-7) 0;
+}
+
+.pricing__heading {
+  margin-bottom: var(--space-6);
+}
+
+.pricing__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  max-width: 900px;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--space-5);
+  background: var(--surface);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-md);
+}
+
+/* The recommended plan is filled with the accent colour */
+.plan--featured {
+  background: var(--citron);
+}
+
+.plan__name {
+  font-size: var(--fs-xl);
+}
+
+.plan__price {
+  margin-top: var(--space-3);
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.plan__note {
+  margin-top: var(--space-2);
+  color: var(--ink-soft);
+}
+
+.plan--featured .plan__note {
+  color: var(--ink);
+}
+
+.plan__features {
+  flex: 1;
+  margin: var(--space-4) 0;
+  width: 100%;
+  border-top: 1px solid var(--ink);
+}
+
+.plan__features li {
+  padding: var(--space-2) 0 var(--space-2) var(--space-4);
+  border-bottom: 1px solid var(--line-soft);
+  position: relative;
+}
+
+.plan__features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.plan--featured .plan__features li {
+  border-color: #12261d40;
+}

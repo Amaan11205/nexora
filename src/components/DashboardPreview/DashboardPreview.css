@@ -1,0 +1,198 @@
+/* Fake dashboard built only with HTML and CSS */
+.dash {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  background: var(--surface);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-md);
+  box-shadow: 10px 10px 0 var(--citron), 10px 10px 0 2px var(--ink);
+  overflow: hidden;
+  font-size: var(--fs-sm);
+}
+
+.dash__sidebar {
+  padding: var(--space-4);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.dash__brand {
+  margin-bottom: var(--space-4);
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.dash__menu-item {
+  padding: var(--space-2) var(--space-3);
+  margin-bottom: var(--space-1);
+  border-radius: var(--radius-sm);
+  opacity: 0.75;
+}
+
+.dash__menu-item--active {
+  background: var(--citron);
+  color: var(--ink);
+  font-weight: 600;
+  opacity: 1;
+}
+
+.dash__main {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  min-width: 0;
+}
+
+.dash__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dash__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-xl);
+}
+
+.dash__sub,
+.dash__label {
+  color: var(--ink-soft);
+}
+
+.dash__avatars {
+  display: flex;
+}
+
+.dash__avatars span,
+.dash__owner {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: var(--green);
+  color: var(--paper);
+  border: 2px solid var(--surface);
+  border-radius: 50%;
+}
+
+.dash__avatars span + span {
+  margin-left: -8px;
+}
+
+.dash__progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+  font-weight: 600;
+}
+
+.dash__bar {
+  height: 12px;
+  background: var(--line-soft);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dash__bar-fill {
+  height: 100%;
+  background: var(--green);
+  transform-origin: left;
+  animation: grow-x 1s ease-out;
+}
+
+.dash__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.dash__stat {
+  padding: var(--space-3);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-sm);
+}
+
+.dash__stat strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  line-height: 1.1;
+}
+
+.dash__lower {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.dash__bars {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-2);
+  height: 120px;
+  margin-top: var(--space-3);
+}
+
+.dash__col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
+.dash__col-fill {
+  background: var(--green);
+  border-radius: 2px 2px 0 0;
+  transform-origin: bottom;
+  animation: grow-y 0.8s ease-out;
+}
+
+.dash__col span {
+  margin-top: var(--space-1);
+}
+
+.dash__task {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.dash__task-title {
+  flex: 1;
+}
+
+.dash__check {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--ink);
+  border-radius: 3px;
+}
+
+.dash__task--done .dash__check {
+  background: var(--citron);
+}
+
+.dash__task--done .dash__task-title {
+  text-decoration: line-through;
+  color: var(--ink-soft);
+}
+
+/* Bars grow once when the page loads: the only entrance animation on the site */
+@keyframes grow-x {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes grow-y {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}

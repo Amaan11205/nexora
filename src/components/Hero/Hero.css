@@ -1,0 +1,33 @@
+.hero {
+  padding: var(--space-6) 0 var(--space-7);
+}
+
+.hero__title {
+  max-width: 11ch;
+  font-size: var(--fs-hero);
+  line-height: 0.95;
+}
+
+/* 12-column grid: text on the left, buttons on the right */
+.hero__row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-4);
+  align-items: end;
+  margin: var(--space-5) 0 var(--space-6);
+}
+
+.hero__text {
+  grid-column: 1 / span 6;
+  max-width: 46ch;
+  font-size: var(--fs-lg);
+  color: var(--ink-soft);
+}
+
+.hero__actions {
+  grid-column: 8 / span 5;
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
