@@ -14,10 +14,10 @@ A modern, responsive landing page for NEXORA, a fictional project management pla
 ### Pricing Section
 ![NEXORA Pricing](screenshots/pricing.png)
 
-### About / How It Works
+### Contact Section
 ![NEXORA About](screenshots/about.png)
 
-### Contact Section
+### About / How It Works
 ![NEXORA Contact](screenshots/contact.png)
 
 ## Tech Stack
