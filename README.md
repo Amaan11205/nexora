@@ -1,20 +1,40 @@
 # NEXORA – SaaS Landing Page
 
-A modern, responsive landing page for NEXORA, a fictional project management platform. Developed as part of the Sankar Group Frontend Development Internship Assignment.
+A modern, responsive landing page for NEXORA, a fictional project management platform. Built as part of the Sankar Group Frontend Development Internship Assignment.
+
+## Live Demo
+
+[View NEXORA](https://nexora-amber-delta.vercel.app/)
+
+## Screenshots
+
+### Hero Section
+![NEXORA Hero](screenshots/hero.png)
+
+### Pricing Section
+![NEXORA Pricing](screenshots/pricing.png)
+
+### About / How It Works
+![NEXORA About](screenshots/about.png)
+
+### Contact Section
+![NEXORA Contact](screenshots/contact.png)
 
 ## Tech Stack
-- React 18
+
+- React
 - Vite
 - JavaScript (ES6+)
 - HTML / JSX
 - CSS
 
 ## Features
+
 - Responsive navigation with mobile menu
-- Hero section with custom dashboard preview
+- Custom dashboard preview
 - Features and How It Works sections
-- Pricing plans (Free & Professional)
-- Contact form with validation
+- Starter and Professional pricing plans
+- Contact form with input validation
 - Smooth scrolling and interactive elements
 - Responsive desktop and mobile layouts
 
@@ -37,6 +57,12 @@ src/
 │   └── responsive.css
 ├── App.jsx
 └── main.jsx
+
+screenshots/
+├── hero.png
+├── pricing.png
+├── about.png
+└── contact.png
 ```
 
 Each component has its own CSS file to keep the code organized and maintainable.
